@@ -3,28 +3,28 @@ let Timer = document.getElementsByClassName('timer');
 for(let d=0; d <= 10; d++){
   let style = Timer[0].style;
   Timer[0].innerHTML += '<option value="'+d+'">'+d+'</option>';
-  style.color = '#b1a9a9';
+  style.color = '#12243f';
   style.border = '0';
 };
 
 for(let h=0; h <= 24; h++){
   let style = Timer[1].style ;
   Timer[1].innerHTML += '<option value="'+h+'">'+h+'</option>';
-  style.color = '#b1a9a9';
+  style.color = '#12243f';
   style.border = '0';
 };
 
 for(let m=0; m <= 59; m++){
   let style = Timer[2].style;
   Timer[2].innerHTML += '<option value="'+m+'">'+m+'</option>';
-  style.color = '#b1a9a9';
+  style.color = '#12243f';
   style.border = '0';
 };
 
-for(let s=1; s <= 60; s++){
+for(let s=0; s <= 60; s++){
   let style = Timer[3].style;
   Timer[3].innerHTML += '<option value="'+s+'">'+s+'</option>';
-  style.color = '#b1a9a9';
+  style.color = '#12243f';
   style.border = '0';
 };
 

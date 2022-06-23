@@ -11,10 +11,34 @@
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    background-color: #11212f;
+    position: relative;
+    /* background-color: #11212f; */
+    overflow: hidden;
+    background-color: #8196b9;
+    background-image: linear-gradient(90deg, #6d9492 0%, #29427bde 50%);
+    font-family: 'Space Mono', monospace;
+
 }
 
-.container > p{
+.addBox{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2.7rem;
+    cursor: pointer;
+    color: #0e1c26;
+    transition: 1s;
+}
+
+.addBox:hover{
+    transform: rotate(180deg);
+}
+
+.addBox:hover{
+    color: #132533;
+}
+
+/* .container > p{
     width: 100%;
     text-align:center;
     font-size: 2rem;
@@ -22,59 +46,88 @@
     position: relative;
     top: -3rem;
     color: #b1a9a9; 
-}
+} */
 
 .box{
     background-color: #03030300;
-    width: 100%;
-    height: 40%;
+    width: 42%;
+    max-width: 36rem;
+    height: 42%;
+    max-height: 32rem;
+    border-radius: 10px;
     display: flex;
     justify-content:center;
     align-items: center;
     position: relative;
+    background-color: #5f5fbb;
     top: -2rem;
+    position: relative;
+}
+
+.box_content{
+    width: 150%;
+    max-width: 50rem;
+    padding: 1rem;
+    height: 60%;
+    position: absolute;
+    background-color: #5e96ea86;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .single{
-   width: calc(100% / 4);
+    width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    color: white;
-    background-color:#03030300;
+    flex-direction: column;
+    /* position: relative; */
 }
 
 .single > p{
-    padding: 1rem 0 ;
+    /* padding-top: .2rem; */
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     width: 100%;
-    color: #b1a9a9;
+    color: #ffffff;
 }
 
 .border{
-    width: 13rem;
-    height: 13rem;
-    border-radius: 50%;
-    background-color: #03030300;
-    border: 1.5px solid gray;
+    width: 100%;
+    height: 50%;
+    /* border-radius: 70% 30% 45% 55% / 45% 30% 70% 55% ; */
+    /* background-color: #925dd8ef; */
+    /* border: 1.5px solid gray; */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    position: relative;
+}
+
+.border > span{
+   position: absolute;
+   right: -4%;
+   z-index: 99;
 }
 
 .timer{
     padding: .1rem .5rem;
-    background-color: #1c1a1a;
+    background-color: #1c1a1a00;
     border: 1px solid #1c1a1a;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: rgb(255, 255, 255);
     position: absolute;
     border: 0;
+    outline: none;
 }
 .timer::-webkit-scrollbar {
     width: 2px;           
@@ -86,25 +139,42 @@
 
 .btn{
     display: flex;
-    width: 100%;
-    height: 20%;
-    /* background-color: red; */
+    /* width: 20%; */
+    /* height: 60%; */
+    flex-direction: column;
+    position: absolute;
+    right: -3%;
+    /* background: #f00000fd;  */
+   
 }
 
 .but{
     display: flex;
     justify-content:center;
     align-items: center;
-    width: 100%;
-    height: 100%;   
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #5e96eaea;
+    margin: .25rem 0;   
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    cursor: pointer;
 }
 
 .but button{
-    font-size: .9rem;
+    cursor: pointer;
+    font-size: 1.5rem;
     background: transparent;
-    padding: 0.3rem 1rem;
-    color: #b1a9a9;
-    border: 1px solid #80808024;
+    color: #dbd2d2;
+    border: 0;
+}
+
+.rotate:hover{
+    transition: 1s;
+    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 768px){
